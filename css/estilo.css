@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #2B4162;
+    margin: 0;
+    padding: 0;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.principal {
+    width: 100%;
+}
+
+.top-header {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/banner.gif);
+    background-size: 100%;
+    background-position: center;
+}
+.titulo1, .titulo2 {
+    font-family: 'Roboto Slab', serif;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.top-header .titulo1 {
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2em 1em;
+    height: 600px;
+    text-align: left;
+    font-size: 400%;
+}
+.titulo2{
+	text-align: center;
+    font-size: 2em;
+    color: white;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1; /* Valor menor que o do menu para garantir que fique abaixo */
+}
+.titulo2::after {
+    content: '';
+    width: 50px; /* Largura da linha */
+    height: 3px; /* Altura da linha */
+    background-color: #20A4F3; /* Cor da linha */
+    position: absolute;
+    bottom: -10px; /* Distância da linha em relação ao título */
+    left: calc(50% - 25px); /* Centraliza a linha em relação ao título */
+}
+.menu {
+    z-index: 1000; /* Valor alto para garantir que o menu fique acima de outros elementos */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #2D4654;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #2D4654;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    width: 160px;
+    text-align: center;
+    padding: 20px 40px;
+    transition-duration: 0.8s;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    background-color: #20A4F3;
+}
+
+.conteudos {
+    height: 750px;
+}
+
+.conteudosobre {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.textopagina {
+    background-color: #0E1E2D;
+	color: white;
+	font-size: 24px;
+    padding: 30px;
+    margin: 0 auto;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.posts h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.bio-text p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.textopagina h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.textopagina p {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.5;
+}
+
+.imagemai {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.imagemai img {
+    width: 100%;
+}
+
+#sobre {
+    margin-top: 10px;
+}
+
+#home {
+    background-image: url("../img/red.gif");
+    height: auto;
+    background-position: center;
+    color: white;
+    padding: 2em 1em;
+    text-align: left;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 400%;
+}
+
+#ai {
+    background-color: #06897C;
+	padding: 2em;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    padding: 20px; /* Espaçamento interno do grid */
+}
+.posts {
+    background-color: #08C4B1;
+	color:white;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    margin-top: 15px;
+    float: left;
+    text-align: left;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.posts h3 {
+    font-size: 1.5em; /* Tamanho do título do post */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: white; /* Cor do texto do título */
+}
+
+.posts p {
+    line-height: 1.6; /* Espaçamento entre linhas do parágrafo */
+    color: #333; /* Cor do texto do parágrafo */
+}
+
+.noticiaimg {
+    margin-top: 15px; /* Espaçamento acima da imagem */
+    text-align: center; /* Centraliza a imagem */
+}
+
+.noticiaimg img {
+    width: 100%; /* Imagem ocupa todo o espaço disponível */
+    max-width: 100%; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada na imagem */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil na imagem */
+}
+
+
+#sustentainability {
+    background-color: #2B4162;
+	padding: 2em;
+}
+
+#cases {
+    background-color: #06897C;
+	padding: 2em;
+}
+
+.bio-container {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; /* Centraliza o conteúdo na vertical */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto dentro dos elementos .bio-text */
+    height: calc(100vh - 120px); /* Ajusta a altura da seção para ocupar toda a tela menos o header e footer */
+}
+
+.bio-text {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    padding: 20px;
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda dentro do .bio-text */
+}
+
+.bio-image {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    text-align: center;
+}
+
+.bio-image img {
+    width: 300px; /* Ajuste conforme necessário */
+    height: 300px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Para imagem redonda */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.bio-image img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+#about {
+    background-color: #2B4162;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.rodape {
+    width: 100%;
+    background-color: #20A4F3;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.social-icons img {
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Para ícones redondos */
+    margin: 0 5px;
+    transition: transform 0.3s ease; /* Efeito de transição suave */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 5px;
+}
